@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team dashboard — ShootFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html"><span class="wordmark__glyph" aria-hidden="true"></span>ShootFlow</a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <a href="dash-team.html">Dashboard</a>
+        <a href="photographers.html">Find photographer</a>
+        <a href="brief.html">Create brief</a>
+        <a class="nav-cta" href="project.html">View projects</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main" class="page-main">
+    <div class="shell page-intro">
+      <p class="eyebrow">Marketing team</p>
+      <h1 class="page-title">Active campaigns: 6</h1>
+    </div>
+    <div class="shell table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Project</th><th>Photographer</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="project.html">Summer Campaign</a></td><td>Sofia Martins</td><td><span class="status status--edit">Editing</span></td></tr>
+          <tr><td>Product Launch</td><td>João Costa</td><td><span class="status status--shoot">Shoot</span></td></tr>
+          <tr><td>Social Content</td><td>Ana Silva</td><td><span class="status status--brief">Brief</span></td></tr>
+          <tr><td>Christmas Campaign</td><td>Miguel Santos</td><td><span class="status status--prop">Proposal</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="shell section-cta-row">
+      <a class="btn btn--dark" href="photographers.html">Find photographer</a>
+      <a class="btn" href="brief.html">Create brief</a>
+      <a class="btn" href="project.html">View projects</a>
+    </p>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-bottom"><p>© 2026 ShootFlow</p></div></div></footer>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create a brief — ShootFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html"><span class="wordmark__glyph" aria-hidden="true"></span>ShootFlow</a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <a href="photographers.html">Find photographers</a>
+        <a href="teams.html">For teams</a>
+        <a href="for-photographers.html">For photographers</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-cta" href="brief.html">Create a brief</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="shell page-intro">
+      <p class="eyebrow">Killer feature</p>
+      <h1 class="page-title">Create a brief</h1>
+      <p class="page-lede">Submit the project. Get 3–5 photographer matches based on style, specialty, location, availability, budget and experience.</p>
+    </div>
+
+    <form class="shell wizard" id="briefForm" novalidate>
+      <ol class="wizard-steps" aria-label="Brief steps">
+        <li class="is-active" data-step-label="1">Shoot type</li>
+        <li data-step-label="2">Project</li>
+        <li data-step-label="3">Budget</li>
+        <li data-step-label="4">Usage</li>
+        <li data-step-label="5">Matches</li>
+      </ol>
+
+      <div class="wizard-pane is-active" data-step="1">
+        <h2>What are you shooting?</h2>
+        <div class="choice-grid" role="group" aria-label="Shoot type">
+          <label class="choice"><input type="radio" name="shootType" value="product" required> Product</label>
+          <label class="choice"><input type="radio" name="shootType" value="campaign"> Campaign</label>
+          <label class="choice"><input type="radio" name="shootType" value="lifestyle" checked> Lifestyle</label>
+          <label class="choice"><input type="radio" name="shootType" value="event"> Event</label>
+          <label class="choice"><input type="radio" name="shootType" value="portrait"> Portrait</label>
+          <label class="choice"><input type="radio" name="shootType" value="other"> Other</label>
+        </div>
+      </div>
+
+      <div class="wizard-pane" data-step="2">
+        <h2>Tell us about the project</h2>
+        <div class="field"><label for="brand">Brand</label><input id="brand" name="brand" value="Hearth" required></div>
+        <div class="field"><label for="campaign">Campaign</label><input id="campaign" name="campaign" value="Summer Campaign" required></div>
+        <div class="field"><label for="location">Location</label><input id="location" name="location" value="Lisbon" required></div>
+        <div class="field"><label for="date">Shoot date</label><input id="date" name="date" type="date" required></div>
+        <div class="field"><label for="images">Number of images</label><input id="images" name="images" type="number" min="1" value="40" required></div>
+        <div class="field"><label for="direction">Creative direction</label><textarea id="direction" name="direction" rows="3" required>Warm, premium lifestyle photography. Natural light, diverse models, suitable for Instagram and paid campaigns.</textarea></div>
+        <div class="field"><label for="deliverables">Deliverables</label><input id="deliverables" name="deliverables" value="40 retouched stills, social crops, web masters" required></div>
+      </div>
+
+      <div class="wizard-pane" data-step="3">
+        <h2>Budget</h2>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="budget" value="500"> €500–€1,000</label>
+          <label class="choice"><input type="radio" name="budget" value="1000" checked> €1,000–€2,500</label>
+          <label class="choice"><input type="radio" name="budget" value="2500"> €2,500–€5,000</label>
+          <label class="choice"><input type="radio" name="budget" value="5000"> €5,000+</label>
+        </div>
+      </div>
+
+      <div class="wizard-pane" data-step="4">
+        <h2>Usage</h2>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="usage" value="organic" checked> Organic social</label>
+          <label class="choice"><input type="checkbox" name="usage" value="paid" checked> Paid social</label>
+          <label class="choice"><input type="checkbox" name="usage" value="website"> Website</label>
+          <label class="choice"><input type="checkbox" name="usage" value="ecommerce"> E-commerce</label>
+          <label class="choice"><input type="checkbox" name="usage" value="print"> Print</label>
+          <label class="choice"><input type="checkbox" name="usage" value="ooh"> OOH</label>
+          <label class="choice"><input type="checkbox" name="usage" value="worldwide"> Worldwide</label>
+          <label class="choice"><input type="checkbox" name="usage" value="duration"> 12 months</label>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn" type="button" id="briefBack" hidden>Back</button>
+        <button class="btn btn--dark" type="button" id="briefNext">Continue</button>
+      </div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-bottom"><p>© 2026 ShootFlow</p></div></div></footer>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

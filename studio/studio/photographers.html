@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find photographers — ShootFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html"><span class="wordmark__glyph" aria-hidden="true"></span>ShootFlow</a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <a href="photographers.html">Find photographers</a>
+        <a href="teams.html">For teams</a>
+        <a href="for-photographers.html">For photographers</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-cta" href="brief.html">Create a brief</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="shell page-intro">
+      <p class="eyebrow">Discovery</p>
+      <h1 class="page-title">Find photographers</h1>
+      <p class="page-lede">Filter commercial photographers by specialty, location, budget, production and availability.</p>
+    </div>
+
+    <div class="shell discover-layout">
+      <aside class="filter-panel" aria-label="Search filters">
+        <h2 class="filter-panel__title">Filters</h2>
+
+        <fieldset class="filter-group">
+          <legend>Specialty</legend>
+          <label><input type="checkbox" name="specialty" value="product"> Product</label>
+          <label><input type="checkbox" name="specialty" value="fashion"> Fashion</label>
+          <label><input type="checkbox" name="specialty" value="food"> Food</label>
+          <label><input type="checkbox" name="specialty" value="lifestyle"> Lifestyle</label>
+          <label><input type="checkbox" name="specialty" value="architecture"> Architecture</label>
+          <label><input type="checkbox" name="specialty" value="corporate"> Corporate</label>
+          <label><input type="checkbox" name="specialty" value="events"> Events</label>
+          <label><input type="checkbox" name="specialty" value="automotive"> Automotive</label>
+          <label><input type="checkbox" name="specialty" value="hospitality"> Hospitality</label>
+          <label><input type="checkbox" name="specialty" value="ecommerce"> E-commerce</label>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Location</legend>
+          <label><input type="radio" name="location" value="all" checked> Worldwide</label>
+          <label><input type="radio" name="location" value="lisbon"> Lisbon</label>
+          <label><input type="radio" name="location" value="porto"> Porto</label>
+          <label><input type="radio" name="location" value="madrid"> Madrid</label>
+          <label><input type="radio" name="location" value="travel"> Willing to travel</label>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Budget</legend>
+          <label><input type="radio" name="budget" value="all" checked> Any</label>
+          <label><input type="radio" name="budget" value="500"> €500–€1,000</label>
+          <label><input type="radio" name="budget" value="1000"> €1,000–€2,500</label>
+          <label><input type="radio" name="budget" value="2500"> €2,500–€5,000</label>
+          <label><input type="radio" name="budget" value="5000"> €5,000+</label>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Production</legend>
+          <label><input type="checkbox" name="production" value="solo"> Solo photographer</label>
+          <label><input type="checkbox" name="production" value="assistant"> Photographer + assistant</label>
+          <label><input type="checkbox" name="production" value="full"> Full production</label>
+          <label><input type="checkbox" name="production" value="studio"> Studio</label>
+          <label><input type="checkbox" name="production" value="location"> Location</label>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Availability</legend>
+          <label><input type="radio" name="avail" value="all" checked> Any</label>
+          <label><input type="radio" name="avail" value="week"> Available this week</label>
+          <label><input type="radio" name="avail" value="month"> Available this month</label>
+        </fieldset>
+
+        <button class="btn" type="button" id="clearFilters">Clear filters</button>
+      </aside>
+
+      <div>
+        <p class="result-count" id="resultCount"></p>
+        <div class="photog-grid" id="photogGrid"></div>
+        <p class="work-empty" id="workEmpty" hidden>No photographers match those filters. Try widening budget or location.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-bottom">
+        <p>© 2026 ShootFlow</p>
+        <p><a href="index.html">Home</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
